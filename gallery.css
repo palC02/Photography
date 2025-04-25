@@ -131,3 +131,35 @@ h1{
      /* optional: makes it black */
 }
 
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .img-container img {
+        max-width: 90%;
+    }
+
+    .footer-icon {
+        width: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .subtext {
+        font-size: 12px;
+    }
+
+    .logo-iamge img {
+        width: 120px;
+    }
+
+    .img-container img {
+        max-width: 100%;
+    }
+}
