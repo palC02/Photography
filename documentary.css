@@ -58,17 +58,20 @@ body {
 .row{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .imgg img{
     width: 1020px;
     height: 560px;
     justify-content: center;
+    align-items: center;
     margin: 0 auto;
     border-radius: 5px;
 }
 .col {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     
 }
@@ -78,6 +81,7 @@ body {
     height: 600px;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
+    align-items: center;
 }
 
 h1{
