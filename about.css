@@ -166,18 +166,7 @@ body {
     overflow-x: hidden;
 }
 /* Responsive Design */
-@media (max-width: 768px) {
-    .img-container {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px auto;
-    }
 
-    #navi ul li {
-        display: block;
-        margin: 10px 0;
-    }
-}
 
 .footer {
     background-color: #f5f5f5;
@@ -215,3 +204,140 @@ body {
      /* optional: makes it black */
 }
 
+@media (max-width: 768px) {
+    /* Header adjustments */
+    .main-header {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    /* Navigation adjustments */
+    #navigation ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    #navigation a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+    
+    /* About section */
+    .about-image img {
+        width: 200px;
+    }
+    
+    .about-text {
+        font-size: 16px;
+    }
+    
+    /* Gear section */
+    .mygear h1 {
+        font-size: 24px;
+    }
+    
+    #navi ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #navi ul li {
+        margin: 5px 0;
+    }
+    
+    #f h1, #f2 h1, #f3 h1, #f4 h1, #f5 h1 {
+        font-size: 22px;
+    }
+    
+    /* Image containers */
+    .img-container {
+        width: 140px;
+        margin: 10px;
+    }
+    
+    /* Footer */
+    .footer-icons {
+        gap: 25px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .main-header {
+        padding: 10px 5px;
+    }
+    
+    .logo img {
+        height: 45px;
+    }
+    
+    #navigation ul {
+        gap: 5px;
+    }
+    
+    #navigation a {
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+    
+    .about-image img {
+        width: 180px;
+    }
+    
+    .about-text {
+        font-size: 14px;
+    }
+    
+    .img-container {
+        width: 120px;
+        margin: 8px;
+    }
+    
+    .img-container h2 {
+        font-size: 14px;
+    }
+    
+    .footer-icons {
+        gap: 20px;
+    }
+    
+    .footer-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .sign-img {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* For large phones in landscape or small tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+    .img-container {
+        width: 160px;
+    }
+    
+    #gear {
+        padding: 30px 10px;
+    }
+}
+
+/* Ensure images don't overflow on very small screens */
+@media (max-width: 320px) {
+    .img-container {
+        width: 100px;
+        margin: 5px;
+    }
+    
+    .about-image img {
+        width: 150px;
+    }
+}
