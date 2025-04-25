@@ -155,6 +155,7 @@ body {
     .imgg {
         padding: 0 10px; /* This gives side spacing inside each column */
         box-sizing: border-box;
+        margin-left: 5px;
     }
 
     .img-container img,
