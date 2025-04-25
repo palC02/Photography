@@ -162,7 +162,9 @@ body {
     margin-top: 10px;
     font-weight: 500;
 }
-
+body {
+    overflow-x: hidden;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .img-container {
@@ -212,4 +214,4 @@ body {
     /* to blend better with background */
      /* optional: makes it black */
 }
-
+}
