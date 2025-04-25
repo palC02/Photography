@@ -132,49 +132,37 @@ h1{
      /* optional: makes it black */
 }
 
+#site, #canvas {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Prevent horizontal scroll on the body */
+body {
+    overflow-x: hidden;
+}
+
+/* Responsive images inside any container */
+
+/* On mobile: center columns and stack vertically */
 @media (max-width: 768px) {
-    .main-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    #navigation ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
-    }
-
     .col {
         flex-direction: column;
-        gap: 20px;
         align-items: center;
     }
 
+    .img-container,
+    .img-container1,
+    .imgg {
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
     .img-container img,
-    .img-container1 img {
-        width: 90%;
-        height: auto;
-    }
-
+    .img-container1 img,
     .imgg img {
-        width: 95%;
+        width: 100%;
         height: auto;
-    }
-
-    h1 {
-        font-size: 22px;
-        padding: 10px;
-    }
-
-    .footer-icons {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .footer-icon {
-        width: 28px;
-        height: 28px;
     }
 }
