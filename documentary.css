@@ -128,163 +128,71 @@ h1{
      /* optional: makes it black */
 }
 
-@media (max-width: 768px) {
-    .main-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    #navigation ul {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
-    }
-
-    .col {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .img-container img,
-    .img-container1 img {
+@media (max-width: 1200px) {
+    .imgg {
         width: 90%;
-        height: 100%;
-    }
-
-    .imgg img {
-        width: 95%;
-        height: 100%;
-    }
-
-    h1 {
-        font-size: 22px;
-        padding: 10px;
-    }
-
-    .footer-icons {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .footer-icon {
-        width: 28px;
-        height: 28px;
-    }
-}
-#site, #canvas {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-/* Prevent horizontal scroll on the body */
-body {
-    overflow-x: hidden;
-}
-/* Media Queries for Responsive Design */
-@media (max-width: 1024px) {
-    .img-container img {
-        width: 180px;
-        height: 260px;
-    }
-    
-    .imgg img {
-        width: 800px;
         height: auto;
+        aspect-ratio: 16/9;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
     .col {
-        margin: 0 5px 15px;
+        flex-wrap: wrap;
     }
     
-    .img-container img {
-        width: 160px;
-        height: 240px;
+    .img-container {
+        width: 45%;
+        height: 400px;
     }
 }
 
 @media (max-width: 768px) {
-    /* Header adjustments */
+    /* Header */
     .main-header {
         flex-direction: column;
-        padding: 15px;
+        align-items: center;
+        padding: 20px;
     }
     
     .logo {
         margin-bottom: 15px;
     }
     
-    .logo img {
-        height: 50px;
-    }
-    
     #navigation ul {
         flex-direction: column;
-        gap: 10px;
-        align-items: center;
-        width: 100%;
-    }
-    
-    #navigation a {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-    
-    /* Gallery adjustments */
-    #image {
-        padding: 20px 10px;
-        display: flex;
-        flex-direction: column;
+        gap: 15px;
+        padding-left: 0;
         align-items: center;
     }
     
-    h1 {
-        font-size: 20px;
-        margin-bottom: 20px;
-    }
-    
+    /* Gallery */
     .col {
-        display: block;
-        width: 100%;
-        margin: 0 0 15px;
-        text-align: center;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
     }
     
     .img-container {
-        display: inline-block;
-        width: 45%;
-        height: 60%;
-        margin: 0 5px 15px;
-        vertical-align: middle;
-    }
-    
-    .img-container img {
-        width: 100%;
-        height: 180px;
-    }
-    
-    .row {
-        width: 100%;
+        width: 90%;
+        height: 450px;
     }
     
     .imgg {
         width: 90%;
-        max-width: 500px;
+        aspect-ratio: 16/9;
     }
     
-    .imgg img {
-        width: 100%;
-        height: auto;
+    h1 {
+        font-size: 22px;
+        padding: 10px;
+        letter-spacing: 3px;
     }
     
-    /* Footer adjustments */
+    /* Footer */
     .footer-icons {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 20px;
     }
     
@@ -294,44 +202,20 @@ body {
     }
 }
 
+/* Extra small screens */
 @media (max-width: 480px) {
-    /* Header adjustments */
-    .main-header {
-        padding: 10px;
-    }
-    
-    .logo img {
-        height: 40px;
-    }
-    
-    /* Gallery adjustments */
-    h1 {
-        font-size: 16px;
-        letter-spacing: 3px;
-    }
-    
     .img-container {
-        width: 90%;
-        margin: 0 0 15px;
+        width: 95%;
+        height: 400px;
     }
     
-    .img-container img {
-        height: auto;
-        max-height: 300px;
-    }
-    
-    /* Footer adjustments */
-    .footer {
-        padding: 20px 10px;
+    h1 {
+        font-size: 18px;
+        letter-spacing: 2px;
     }
     
     .footer-icons {
         gap: 15px;
-    }
-    
-    .footer-icon {
-        width: 24px;
-        height: 24px;
     }
     
     .sign-img {
