@@ -1,14 +1,21 @@
+/* Base styles */
 body, ul, li {
     margin: 0;
     padding: 0;
     list-style: none;
-    
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+#site, #canvas {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* Header layout */
@@ -19,7 +26,6 @@ body {
     padding: 20px 50px;
     background-color: black;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
-    
 }
 
 /* Logo styling */
@@ -49,51 +55,57 @@ body {
     border-radius: 5px;
 }
 
+/* Image gallery */
 #image {
     background-color: #000;
     padding: 40px 20px;
-    display: grid;
-    gap: 20px;
+    text-align: center;
 }
-.row{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
 }
-.imgg img{
-    width: 1020px;
-    height: 560px;
-    justify-content: center;
-    align-items: flex-start;
-    margin: 0 auto;
-    border-radius: 5px;
-}
+
 .col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px 20px;
 }
 
 .img-container img {
-    width: 500px; /* adjust to your preferred size */
-    height: 600px;
+    width: 200px;
+    height: 240px;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
-    align-items: flex-start;
-    justify-content: center;
+    margin-bottom: 20px;
+    object-fit: cover;
 }
 
-h1{
-    color:white;
-    text-align:  center;
-    
+.img-container:hover img {
+    transform: scale(1.05);
 }
-.img-container1 img{
-    width: 300px;
-    height: 550px ;
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.imgg img {
+    width: 1020px;
+    max-width: 100%;
+    height: auto;
+    max-height: 560px;
     border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Footer styles */
+#footer {
+    width: 100%;
 }
 
 .footer {
@@ -108,6 +120,8 @@ h1{
     display: flex;
     gap: 40px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .footer-icon {
@@ -123,84 +137,168 @@ h1{
 
 .signature {
     margin-top: 10px;
+    text-align: center;
+    width: 100%;
 }
 
 .sign-img {
     height: 60px;
-    width:60px;
-    /* to blend better with background */
-     /* optional: makes it black */
+    width: 60px;
+    border-radius: 5px;
 }
 
-#site, #canvas {
-    max-width: 100%;
-    overflow-x: hidden;
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+    .img-container img {
+        width: 180px;
+        height: 220px;
+    }
+    
+    .imgg img {
+        width: 800px;
+        height: auto;
+    }
 }
 
-/* Prevent horizontal scroll on the body */
-body {
-    overflow-x: hidden;
+@media (max-width: 900px) {
+    .col {
+        margin: 0 5px 15px;
+    }
+    
+    .img-container img {
+        width: 160px;
+        height: 200px;
+    }
 }
-
-/* Responsive images inside any container */
-
-/* On mobile: center columns and stack vertically */
 
 @media (max-width: 768px) {
-            #image {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .col {
-                width: 90%;
-                max-width: 400px;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-                letter-spacing: 5px;
-            }
-            
-            .imgg {
-                width: 90%;
-                max-width: 400px;
-            }
-             .main-header {
+    /* Header adjustments */
+    .main-header {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 20px;
+        padding: 15px;
     }
-
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
     #navigation ul {
         flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
     }
-   
-
-
+    
+    #navigation a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    /* Gallery adjustments */
+    #image {
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .col {
+        display: block;
+        width: 100%;
+        margin: 0 0 15px;
+        text-align: center;
+    }
+    
+    .img-container {
+        display: inline-block;
+        width: 45%;
+        margin: 0 5px 15px;
+        vertical-align: middle;
+    }
+    
+    .img-container img {
+        width: 100%;
+        height: 180px;
+    }
+    
+    .row {
+        width: 100%;
+    }
+    
+    .imgg {
+        width: 90%;
+        max-width: 500px;
+    }
+    
+    .imgg img {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Footer adjustments */
     .footer-icons {
-        flex-wrap: wrap;
-        justify-content: center;
         gap: 20px;
     }
-
+    
     .footer-icon {
         width: 28px;
         height: 28px;
     }
-        }
-        
-        /* Extra small screens */
-        @media (max-width: 480px) {
-            .col {
-                width: 95%;
-            }
-            
-            h1 {
-                font-size: 1.5rem;
-                letter-spacing: 3px;
-            }
-        }
+}
+
+@media (max-width: 480px) {
+    /* Header adjustments */
+    .main-header {
+        padding: 10px;
+    }
+    
+    .logo img {
+        height: 40px;
+    }
+    
+    /* Gallery adjustments */
+    h1 {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+    
+    .img-container {
+        width: 90%;
+        margin: 0 0 15px;
+    }
+    
+    .img-container img {
+        height: auto;
+        max-height: 300px;
+    }
+    
+    /* Footer adjustments */
+    .footer {
+        padding: 20px 10px;
+    }
+    
+    .footer-icons {
+        gap: 15px;
+    }
+    
+    .footer-icon {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .sign-img {
+        height: 50px;
+        width: 50px;
+    }
+}
