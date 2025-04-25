@@ -157,6 +157,9 @@ body {
         gap: 15px;
         padding-left: 0;
     }
+    #image{
+        align-items: center;
+    }
     .col {
         flex-direction: column;
         gap: 20px;
